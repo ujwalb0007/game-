@@ -1,36 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIC TAC TOE ...!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #ffccff, #ffe6e6);
+      overflow-x: hidden;
+    }
 
-    <link rel="stylesheet" href="test2.css">
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #ff007f;
+      animation: fadeIn 3s ease-in-out;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      color: #cc0066;
+      margin-top: 0;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    p.poem {
+      font-size: 1.5rem;
+      color: #99004d;
+      max-width: 800px;
+      margin: 1rem auto;
+      line-height: 2.2rem;
+      white-space: pre-wrap;
+      animation: fadeIn 5s ease-in-out;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      animation: beat 1s infinite;
+      margin: 2rem auto;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 90px;
+      border-radius: 50px 50px 0 0;
+      background: red;
+    }
+
+    .heart::before {
+      left: 50px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .button {
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff007f;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #e6006b;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 1rem;
+      color: #cc0066;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>I LOVE YOU CHANCHAL BABY ❤️</h1>
+    <h2>Will You Be Mine Forever?</h2>
 
-    <div class="msg-container hide">
-<p id="msg">Winner...!</p>
-    </div>
-    <main>
-        <h1>TIC TAC TOE ....!</h1>
-<div class="container">
-<div class="game">
-<button class="box"></button>
-<button class="box"></button>
-<button class="box"></button>
-<button class="box"></button>
-<button class="box"></button>
-<button class="box"></button>
-<button class="box"></button>
-<button class="box"></button>
-<button class="box"></button>
-</div>
-</div>
-<!-- Airplane elements -->
+    <div class="heart"></div>
 
-<button id="reset-btn">RESET GAME</button>
-    </main>
-    <script src="TICTAC.js"></script>
+    <p class="poem">
+      In the garden of stars, your soul shines bright,
+      Like the moon in a soft, tender night.
+      Your smile is the dawn that awakens my heart,
+      Each moment with you — a beautiful start.
+
+      I dreamed of a love that's gentle and true,
+      And then, my love, I stumbled on you.
+      With every beat, my heart does say,
+      I'm yours forever, come what may.
+    </p>
+
+    <button class="button" onclick="alert('She said YES! 💖')">Say Yes 💍</button>
+
+    <footer>
+      Made with endless love just for you 💕
+    </footer>
+  </div>
 </body>
 </html>
